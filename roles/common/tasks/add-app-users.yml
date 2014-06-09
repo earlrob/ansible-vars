@@ -6,7 +6,8 @@
 
 - name: Create App User Accounts
   user: name={{ item }} groups={{ app_name }} shell=/bin/bash createhome=yes password={{ password }}
-  with_items: app_user_list
+  #  with_items: app_user_list
+  with_items: "{{app_name}}-users"
   #
   # Errors because ansible doesn't see the lists named {{ app-name }}-users in roles/common/vars/app_users.yml
   # ansible doesn't error when app_user_list is a list instead of a var,

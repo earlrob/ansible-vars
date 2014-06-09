@@ -1,6 +1,7 @@
 ---
 - name: Common Setup
   hosts: all
+  gather_facts: no
 
   roles: 
     - { role: common, sudo: yes }
