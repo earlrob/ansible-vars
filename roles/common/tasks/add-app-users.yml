@@ -1,0 +1,6 @@
+---
+- include_vars: app_users.yml
+
+- name: Create App User Accounts
+  user: name={{ item }} shell=/bin/bash createhome=yes password={{ password }}
+  with_items: app_user_list

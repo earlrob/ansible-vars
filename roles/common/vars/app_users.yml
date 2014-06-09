@@ -1,0 +1,7 @@
+---
+
+# App Specific Users
+app_users: "[ {{ app_user_group }} ]"
+
+app-a_users:     ["usera1", "usera2", "usera3"]
+app-b_users:     ["userb1", "userb2", "userb3"]

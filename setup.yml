@@ -1,0 +1,6 @@
+---
+- name: Common Setup
+  hosts: all
+
+  roles: 
+    - { role: common, sudo: yes }
