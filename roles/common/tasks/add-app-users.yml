@@ -1,6 +1,9 @@
 ---
 - include_vars: app_users.yml
 
+- name: Create App Group
+  group: name={{ app_name }}
+
 - name: Create App User Accounts
-  user: name={{ item }} shell=/bin/bash createhome=yes password={{ password }}
+  user: name={{ item }} groups={{ app_name }} shell=/bin/bash createhome=yes password={{ password }}
   with_items: app_user_list
