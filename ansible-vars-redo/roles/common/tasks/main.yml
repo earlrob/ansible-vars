@@ -1,0 +1,7 @@
+---
+- name: Debug App Group
+  debug: msg="{{ app_name }}"
+
+- name: Debug App User Accounts
+  debug: msg="{{ item }} {{ app_name }} {{ password }}"
+  with_items: app_user_list 

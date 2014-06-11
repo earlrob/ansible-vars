@@ -1,7 +1,14 @@
 ---
 
 # App Specific Users
-app_user_list: "{{ app_name }}-users"
+#app_user_list: "{{ app_name }}-users"
 
-app-a-users: ["usera1", "usera2", "usera3"]
-app-b-users: ["userb1", "userb2", "userb3"]
+# From Ansible support
+#app_user_list: "{{ hostvars[inventory_hostname][app_name + '_users'] }}"
+#
+
+app_user_list: "{{ hostvars[inventory_hostname][app_name + '-users'] }}"
+
+# Lists of App Users
+#app-a-users: ["usera1", "usera2", "usera3"]
+#app-b-users: ["userb1", "userb2", "userb3"]

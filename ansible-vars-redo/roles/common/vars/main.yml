@@ -1,0 +1,1 @@
+app_user_list: "{{ hostvars[inventory_hostname][app_name + '_users'] }}"
